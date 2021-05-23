@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        SONAR_TOKEN= '64329bab7f2264e78495529bfc2382f13ef589de'
+        SONAR_TOKEN= 'c441ff5dec3d47ba86da3e2af4a9466d6695c19c'
         APP_HOME='/home/app'
         PRAGRA_BATCH='devs'
     }
