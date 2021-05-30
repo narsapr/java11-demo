@@ -6,7 +6,7 @@ pipeline {
         PRAGRA_BATCH='devs'
     }
     options { 
-        quietPeriod(20) 
+        quietPeriod(15) 
     }
     parameters { 
             choice(name: 'ENV_TO_DEPLOY', 
