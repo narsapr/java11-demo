@@ -6,7 +6,7 @@ pipeline {
         PRAGRA_BATCH='devs'
     }
     options { 
-        quietPeriod(30) 
+        quietPeriod(20) 
     }
     parameters { 
             choice(name: 'ENV_TO_DEPLOY', 
@@ -56,6 +56,31 @@ pipeline {
                 sh 'mvn package'
             }
         }
+        
+      stage('Publish to Artifactory') {
+         steps{
+             rtUpload (
+                 serverId: 'Artifactory',
+                 spec: '''{
+                     "files": [
+                     {
+                         "pattern": "*dummy*.jar",
+                         "target": "Arifactory_local/dummy"
+                     },
+                     
+                     {
+                         "pattern": "pox:xml",
+                         "target": "Arifactory_local/dummy" 
+                     }
+                
+                     
+                     ]
+                         
+                     
+                 }''',
+                 )
+         }   
+        }  
     }
 
     post {
