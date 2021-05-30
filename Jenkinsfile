@@ -30,7 +30,7 @@ pipeline {
         }
         stage('Git CheckoutOut'){
             steps{
-                checkout scm
+                checkout scm 
             }
         }
         stage('Compile') {
