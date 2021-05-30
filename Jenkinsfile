@@ -65,14 +65,13 @@ pipeline {
                      "files": [
                      {
                          "pattern": "*dummy*.jar",
-                         "target": "libs-release-local/dummy" 
-                         //"target": "Arifactory_local/dummy"
+                         "target": "Arifactory_local/dummy"
+                         
                      },
                      
                      {
                          "pattern": "pox:xml",
-                         "target": "libs-release-local/dummy" 
-                         //"target": "Arifactory_local/dummy"
+                          "target": "Arifactory_local/dummy"
                      }
                 
                      
